@@ -1,0 +1,19 @@
+body { margin: 0; font-family: 'Poppins', sans-serif; }
+        #scene-container { 
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+        canvas { display: block; }
+        #overlay-text {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #333;
+            font-size: 30px;
+            font-weight: 700;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+        }

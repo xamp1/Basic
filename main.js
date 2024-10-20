@@ -1,5 +1,5 @@
 const scene = new THREE.Scene();
-        scene.background = new THREE.Color(0xF0F0F0);
+        scene.background = new THREE.Color(0xFFFFFF);
 
         const container = document.getElementById('scene-container');
         const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
@@ -8,7 +8,11 @@ const scene = new THREE.Scene();
         container.insertBefore(renderer.domElement, container.firstChild);
 
         const geometry = new THREE.TorusGeometry(1, 0.4, 16, 100);
-        const material = new THREE.MeshPhongMaterial({ color: 0xffA500 });
+        const material = new THREE.MeshStandardMaterial({
+            color: 0x6b4226, 
+            roughness: 0.3, 
+            metalness: 0.1
+        });
         const donut = new THREE.Mesh(geometry, material);
         scene.add(donut);
 
